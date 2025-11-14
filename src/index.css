@@ -2,45 +2,28 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base {
-  :root {
-    --font-sans: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-    --font-geist: 'Geist', system-ui, sans-serif;
-    --font-geist-mono: 'Geist Mono', monospace;
-    --font-mona: 'Mona Sans', system-ui, sans-serif;
-    --font-ibm-plex: 'IBM Plex Sans', system-ui, sans-serif;
-    --font-manrope: 'Manrope', system-ui, sans-serif;
-  }
-
-  html {
-    font-family: var(--font-sans);
-    font-feature-settings: "rlig" 1, "calt" 1;
-  }
-
-  body {
-    @apply antialiased;
-  }
+:root{
+  --blue:#1e90ff;
+  --green:#22c55e;
+  --orange:#f97316;
+  --black:#111827;
 }
 
-/* Custom utility classes for shadcn/ui patterns */
-@layer utilities {
-  .animate-in {
-    animation-name: animateIn;
-    animation-duration: 350ms;
-    --tw-enter-opacity: initial;
-    --tw-enter-scale: initial;
-    --tw-enter-rotate: initial;
-    --tw-enter-translate-x: initial;
-    --tw-enter-translate-y: initial;
-  }
+body{ background:#f8fafc; }
 
-  .animate-out {
-    animation-name: animateOut;
-    animation-duration: 350ms;
-    --tw-exit-opacity: initial;
-    --tw-exit-scale: initial;
-    --tw-exit-rotate: initial;
-    --tw-exit-translate-x: initial;
-    --tw-exit-translate-y: initial;
-  }
-}
+.hover-lift{ transition: transform .25s ease, box-shadow .25s ease; }
+.hover-lift:hover{ transform: translateY(-4px); box-shadow: 0 10px 30px rgba(0,0,0,.08)!important; }
+
+/* Animate.css minimal subset via CDN classes we trigger */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css');
+
+/* Smooth scroll */
+html{ scroll-behavior:smooth; }
+
+/* Bootstrap overrides for rounded look */
+.rounded-4{ border-radius:1rem!important }
+.rounded-pill{ border-radius:999px!important }
+
+.navbar .nav-link{ transition: color .2s ease, opacity .2s ease }
+.navbar .nav-link:hover{ opacity:.8 }
+

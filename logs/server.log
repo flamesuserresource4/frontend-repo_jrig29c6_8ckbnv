@@ -1,0 +1,16 @@
+
+> vibe-generated-app@1.0.0 dev
+> vite
+
+
+  VITE v5.4.20  ready in 437 ms
+
+  ➜  Local:   http://localhost:3000/
+  ➜  Network: http://172.20.7.200:3000/
+[vite:css] @import must precede all other statements (besides @charset or empty @layer)
+16 |  
+17 |  /* Animate.css minimal subset via CDN classes we trigger */
+18 |  @import url('https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css');
+   |  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+19 |  
+20 |  /* Smooth scroll */
